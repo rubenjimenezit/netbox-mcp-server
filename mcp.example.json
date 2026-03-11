@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "netbox": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/netbox-mcp-server",
+        "run",
+        "netbox-mcp-server"
+      ],
+      "env": {
+        "NETBOX_URL": "https://your-netbox-instance.example.com/",
+        "NETBOX_TOKEN": "${env:NETBOX_TOKEN}",
+        "VERIFY_SSL": "true"
+      }
+    }
+  }
+}
